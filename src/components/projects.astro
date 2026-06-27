@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import moveit from "../../public/moveit.png";
 import studify from "../../public/studify.png";
 import snackly from "../../public/snackly.png";
 import fap from "../../public/fap.png";
+import signalwise from "../../public/signalwise.png"
 
 interface Project {
   title: string;
@@ -14,6 +14,13 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Signalwise",
+    image: signalwise as ImageMetadata,
+    link: "https://github.com/stutiwhy/signalwise",
+    preview: "https://signalwise.netlify.app/",
+    status: "Deployed",
+  },
   {
     title: "Snackly",
     image: snackly as ImageMetadata,
@@ -34,13 +41,6 @@ const projects: Project[] = [
     link: "https://www.linkedin.com/in/stutiwhy/",
     preview: "https://www.linkedin.com/in/stutiwhy/",
     status: "Built (internship)",
-  },
-  {
-    title: "MoveIt",
-    image: moveit as ImageMetadata,
-    link: "https://github.com/stutiwhy/moveit",
-    preview: "https://drive.google.com/file/d/1_mFe4ixQtuE0oL5Evsb97mg3BdwGx0dC/view",
-    status: "Built",
   },
 ];
 ---
